@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>seh_deals_transport_solution</title>
+    <style>
+        body {
+          background-color: rgb(64, 64, 64);
+          margin: 0;
+          padding: 0;
+          /*background-image: url("../pictures/deck.jpg");-->*/
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+          height: 100vh;
+        }
+    
+        .content {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          background-color: rgba(255, 255, 255, 0.8);
+          padding: 20px;
+          border-radius: 5px;
+        }
+        .mainstory{
+          color: royalblue;
+        }
+        .note{
+          color: rgb(191, 160, 255);
+          font-size: 20px;
+        }
+        .dest{
+          color: rgb(173, 216, 230);
+        }
+        .lin{
+          color: red;
+        }
+        table th {
+          color: #0077b6; /* Set the desired color */
+          font-size: 20px;
+        }
+        table td {
+          color: rgb(255, 255, 0); /* Set the desired color for table cell contents */
+        }
+        .noter {
+          margin-bottom: 100px;
+          color: rgb(191, 160, 255);
+          font-size: 20px;
+        }
+      </style>
+</head>
+<body>
+    <h1 class="mainstory">Welcome to Seh Deals(Midlands State University) Transport Solutions</h1>
+    
+
+    <p class="note">Only those who have paid the full bus fare will appear on this site</p>
+    <p class="note">The site is dedicated to Midlands State University students only!</p>
+    <p class="noter">In partnership with <a class="lin" href="https://safaribay.net/cag-buses-from-harare-to-bulawayo/">CAG</a> Transport</p>
+    
+    
+    <h2 class="dest">MSU TO HARARE $10</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>seat number</th>
+          <th>first name</th>
+          <th>last name</th>
+          <th>registration number</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for item in data %}
+        <tr>
+          <td>{{ item.seat_number }}</td>
+          <td>{{ item.first_name }}</td>
+          <td>{{ item.last_name }}</td>
+          <td>{{ item.registration_number }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+      </table>
+    
+    
+    
+    <h2 class="dest">MSU TO MARONDERA $15</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>seat number</th>
+          <th>first name</th>
+          <th>last name</th>
+          <th>registration number</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for item in data1 %}
+        <tr>
+          <td>{{ item.seat_number }}</td>
+          <td>{{ item.first_name }}</td>
+          <td>{{ item.last_name }}</td>
+          <td>{{ item.registration_number }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+      </table>
+    
+</body>
+</html>
